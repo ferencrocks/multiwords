@@ -1,0 +1,33 @@
+@import "./variables";
+
+.letter {
+  align-items: center;
+  background-color: $letter-background;
+  border: 1px solid $letter-border-color;
+  border-radius: 2px;
+  color: $letter-color;
+  cursor: pointer;
+  display: flex;
+  font-size: 70px;
+  justify-content: center;
+  transition: background-color 0.05s ease-in, transform 0.15s ease-in-out;
+  user-select: none;
+
+  @media (max-width: 768px) {
+    font-size: 15vmin;
+  }
+
+  &.selected {
+    background-color: #A682D9;
+    color: #EEE;
+    transform: scale(0.97);
+  }
+
+  .mouseEnterArea {
+    display: flex;
+    width: 0.8em;
+    height: 0.8em;
+    justify-content: center;
+    align-items: center;
+  }
+}
